@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/shopping-cart/static/css/main.562fb11b.css",
+    "main.js": "/shopping-cart/static/js/main.e204b1e4.js",
+    "static/media/halloween.png": "/shopping-cart/static/media/halloween.4ded69e0eb015164ee89.png",
+    "static/media/pictwo.png": "/shopping-cart/static/media/pictwo.c93297c0a8c5dd55e09f.png",
+    "static/media/spooktwo.png": "/shopping-cart/static/media/spooktwo.b354158404e52ba497e3.png",
+    "static/media/green.png": "/shopping-cart/static/media/green.011488c11a4e5c988e38.png",
+    "static/media/gold.png": "/shopping-cart/static/media/gold.e17dcdfcd2a0f33098da.png",
+    "static/media/redthree.png": "/shopping-cart/static/media/redthree.f46cdcb90e52911850d9.png",
+    "static/media/redtwo.png": "/shopping-cart/static/media/redtwo.866dc52dd16a55740567.png",
+    "static/media/blue.png": "/shopping-cart/static/media/blue.301fa3de3ba0ec0340cd.png",
+    "static/media/red.png": "/shopping-cart/static/media/red.650916e6286974a71684.png",
+    "static/media/picthree.jpg": "/shopping-cart/static/media/picthree.c7e490365f19964fb722.jpg",
+    "static/media/art.png": "/shopping-cart/static/media/art.62fd0c4f851e8a74214c.png",
+    "static/media/spookone.png": "/shopping-cart/static/media/spookone.2143220c660d034be6dd.png",
+    "static/media/pinky.png": "/shopping-cart/static/media/pinky.6cb0d18792d38ec224d9.png",
+    "static/media/pink.png": "/shopping-cart/static/media/pink.9477edbb1fafba12006c.png",
+    "static/media/picone.jpg": "/shopping-cart/static/media/picone.3e7a9c2cc6cecdb73010.jpg",
+    "static/media/empty.svg": "/shopping-cart/static/media/empty.a2934eaf0f8d0c803013f0c8c7d24f44.svg",
+    "static/media/bag.svg": "/shopping-cart/static/media/bag.dcd10023b379c2b9f093949c610e3313.svg",
+    "index.html": "/shopping-cart/index.html",
+    "main.562fb11b.css.map": "/shopping-cart/static/css/main.562fb11b.css.map",
+    "main.e204b1e4.js.map": "/shopping-cart/static/js/main.e204b1e4.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.562fb11b.css",
+    "static/js/main.e204b1e4.js"
+  ]
+}
