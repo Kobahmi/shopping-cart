@@ -27,7 +27,7 @@ const RouteSwitch = () => {
           id: el.id,
           price: el.price,
           quantity: 1,
-          total: 20,
+          total: el.total,
         });
       });
       setTotalCards([...data]);
@@ -74,6 +74,15 @@ const RouteSwitch = () => {
     };
   }, [cartState]);
 
+  const grandTotal = (arr) => {
+    let total = 0;
+    arr.forEach((el) => {
+      el.total = el.quantity * el.price;
+      total += el.total;
+    });
+    return total;
+  };
+
   const handleQuantity = (op, id) => {
     let item = cart.find((el) => el.id === id);
     if (op === "+") {
@@ -84,16 +93,6 @@ const RouteSwitch = () => {
     }
     item.total = item.quantity * item.price;
     setCart([...cart]);
-  };
-
-  const grandTotal = (arr) => {
-    let total = 0;
-
-    arr.forEach((el) => {
-      el.total = el.quantity * el.price;
-      total += el.total;
-    });
-    return total;
   };
 
   const checkEmpty = () => {
