@@ -136,7 +136,7 @@ const RouteSwitch = () => {
         theme="light"
       />
       <Routes>
-        <Route path="/" element={<App />} />
+        <Route path="/shopping-cart/" element={<App />} />
         <Route
           path="/shop"
           element={<Shop totalCards={totalCards} handleClick={handleClick} />}

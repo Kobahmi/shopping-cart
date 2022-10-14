@@ -23,7 +23,7 @@ const Header = (props) => {
             </button>
           </div>
         </div>
-        <Link className="head" to="/">
+        <Link className="head" to="/shopping-cart/">
           <img className="art" src={art} alt="art" />
           <h1>UNREAL POLISH</h1>
         </Link>
