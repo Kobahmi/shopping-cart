@@ -97,7 +97,6 @@ const RouteSwitch = () => {
   };
 
   const checkEmpty = () => {
-    console.log("WHY");
     if (totalQuantity(cart) === 0) {
       setEmpty(true);
     } else {
