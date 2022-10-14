@@ -15,7 +15,7 @@ const Header = (props) => {
         <div className="menu">
           <Link to="/shop">FREE SHIPPING 75$+</Link>
           <div className="header-menu">
-            <Link to="/">Home</Link>
+            <Link to="/shopping-cart/">Home</Link>
             <Link to="/shop">Shop</Link>
             <button className="bag" onClick={checkEmpty}>
               <img src={bag} alt="bag" />
