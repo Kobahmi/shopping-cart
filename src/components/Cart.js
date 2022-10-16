@@ -13,6 +13,7 @@ const Cart = (props) => {
           <div className="combien-container">
             <button
               className="minus"
+              id="minus"
               onClick={() => handleQuantity("-", cart.id)}
             >
               -
@@ -22,6 +23,7 @@ const Cart = (props) => {
             </div>
             <button
               className="plus"
+              id="plus"
               onClick={() => handleQuantity("+", cart.id)}
             >
               +

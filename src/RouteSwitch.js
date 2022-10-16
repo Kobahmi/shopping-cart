@@ -35,20 +35,6 @@ const RouteSwitch = () => {
     getData();
   }, []);
 
-  const handleClick = (id) => {
-    if (checkCart(id)) {
-      notify();
-    } else {
-      let item = totalCards.find((el) => el.id === id);
-      setCart([...cart, item]);
-      notifyAdd();
-    }
-  };
-
-  const checkCart = (id) => {
-    return cart.find((el) => el.id === id);
-  };
-
   useEffect(() => {
     const minimizeOnClick = () => {
       if (cartState === "none") {
@@ -57,7 +43,6 @@ const RouteSwitch = () => {
         setCartState("none");
       }
     };
-
     document.querySelector(".left").addEventListener("click", minimizeOnClick);
     document.querySelector(".bag").addEventListener("click", minimizeOnClick);
     document.querySelector(".close").addEventListener("click", minimizeOnClick);
@@ -73,6 +58,31 @@ const RouteSwitch = () => {
         .removeEventListener("click", minimizeOnClick);
     };
   }, [cartState]);
+
+  useEffect(() => {
+    const checkEmpty = () => {
+      if (totalQuantity(cart) === 0) {
+        setEmpty(true);
+      } else {
+        setEmpty(false);
+      }
+    };
+    checkEmpty();
+  });
+
+  const handleClick = (id) => {
+    if (checkCart(id)) {
+      notify();
+    } else {
+      let item = totalCards.find((el) => el.id === id);
+      setCart([...cart, item]);
+      notifyAdd();
+    }
+  };
+
+  const checkCart = (id) => {
+    return cart.find((el) => el.id === id);
+  };
 
   const grandTotal = (arr) => {
     let total = 0;
@@ -95,14 +105,6 @@ const RouteSwitch = () => {
     setCart([...cart]);
   };
 
-  const checkEmpty = () => {
-    if (totalQuantity(cart) === 0) {
-      setEmpty(true);
-    } else {
-      setEmpty(false);
-    }
-  };
-
   const totalQuantity = (arr) => {
     let total = 0;
     arr.forEach((el) => {
@@ -113,14 +115,16 @@ const RouteSwitch = () => {
 
   const deleteItem = (id) => {
     setCart(cart.filter((el) => el.id !== id));
+    notifyDelete();
   };
 
   const notify = () => toast.info("Item already in the bag!");
   const notifyAdd = () => toast.success("Item added in the bag!");
+  const notifyDelete = () => toast.success("Item deleted successfully!");
 
   return (
     <BrowserRouter>
-      <Header bagNumber={totalQuantity(cart)} checkEmpty={checkEmpty} />
+      <Header bagNumber={totalQuantity(cart)} />
       <ToastContainer
         position="top-center"
         autoClose={4000}

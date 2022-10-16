@@ -4,7 +4,7 @@ import bag from "../images/bag.svg";
 import { Link } from "react-router-dom";
 
 const Header = (props) => {
-  const { bagNumber, checkEmpty } = props;
+  const { bagNumber } = props;
 
   return (
     <div className="home-content">
@@ -40,7 +40,7 @@ const Header = (props) => {
           <div className="header-menu">
             <Link to="/shopping-cart/">Home</Link>
             <Link to="/shop">Shop</Link>
-            <button className="bag" onClick={checkEmpty}>
+            <button className="bag">
               <img src={bag} alt="bag" />
               <p>{bagNumber}</p>
             </button>
