@@ -9,6 +9,7 @@ const Card = (props) => {
         src={card.image}
         id={card.id}
         alt="character"
+        loading="lazy"
       />
       <div className="polish-name-container">
         <p className="polish-name">{card.name}</p>

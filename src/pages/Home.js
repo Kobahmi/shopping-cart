@@ -10,7 +10,12 @@ const Home = () => {
     <div className="home-content">
       <div className="real-content">
         <Link className="wallpaper-content" to="/shop">
-          <img className="wallpaper" src={halloween} alt="halloween" />
+          <img
+            className="wallpaper"
+            src={halloween}
+            alt="halloween"
+            loading="lazy"
+          />
           <div className="big-sale">
             <h3>EXTRA</h3>
             <h1>15% OFF</h1>
@@ -26,19 +31,24 @@ const Home = () => {
         <div className="polish-container">
           <div>
             <Link className="info" to="/shop">
-              <img className="info-pic" src={pictwo} alt="pic" />
+              <img className="info-pic" src={pictwo} alt="pic" loading="lazy" />
               <p>HALLOWEEN SPOOKS</p>
             </Link>
           </div>
           <div>
             <Link className="info" to="/shop">
-              <img className="info-pic" src={picthree} alt="pic" />
+              <img
+                className="info-pic"
+                src={picthree}
+                alt="pic"
+                loading="lazy"
+              />
               <p>GET READY FOR CHRISTMAS</p>
             </Link>
           </div>
           <div>
             <Link className="info" to="/shop">
-              <img className="info-pic" src={pic} alt="pic" />
+              <img className="info-pic" src={pic} alt="pic" loading="lazy" />
               <p>GLAZED DONUT NAIL TREND</p>
             </Link>
           </div>
